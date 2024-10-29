@@ -12,6 +12,7 @@ import { getCells } from "../../utils/getCells";
 import CustomTableFilters from "../../components/table/CustomTableFilters";
 import CustomTablePagination from "../../components/table/CustomTablePagination";
 import TableSkeleton from "../../components/table/TableSkeleton";
+import TableNoRecordRow from "../../components/table/TableNoRecordRow";
 
 const CompanyTable = observer(() => {
   const { companyDataStore } = useRootStore();
@@ -95,6 +96,10 @@ const CompanyTable = observer(() => {
                   );
                 })
               )}
+              {companyDataStore.companies?.totalCount === 0 &&
+                !companyDataStore.loading && (
+                  <TableNoRecordRow headCount={headcells.length} />
+                )}
             </TableBody>
           </Table>
         </TableContainer>

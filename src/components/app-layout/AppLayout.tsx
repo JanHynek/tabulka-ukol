@@ -8,8 +8,8 @@ const AppLayout = ({ children }: IAppLayout) => {
   return (
     <Box
       sx={{ backgroundColor: "#F2F4F6" }}
-      height="100vh"
-      p={{ xs: 3, md: 6 }}
+      height="calc(100vh - 64px)"
+      p={{ xs: 3, md: 4 }}
     >
       {children}
     </Box>
