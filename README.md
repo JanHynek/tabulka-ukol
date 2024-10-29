@@ -15,5 +15,5 @@ Install my-project with npm
 Clone the project
 
 ```bash
-  npm run start
+  npm run dev
 ```
