@@ -16,7 +16,7 @@ import TableSkeleton from "../../components/table/TableSkeleton";
 const CompanyTable = observer(() => {
   const { companyDataStore } = useRootStore();
   const headcells = companyHeadCells;
-  console.log(companyDataStore.loading);
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedFetch = useCallback(
     debounce((search, offset, limit) => {
